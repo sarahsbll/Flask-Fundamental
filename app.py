@@ -5,7 +5,8 @@ import dropbox
 
 
 # using an access token
-dbx = dropbox.Dropbox('sl.BIHrA2OxmhhRbKbeVGMAvWeCB-5V6jIugXVEN7ldnz0Gjp7QAbR2W0PhsiW0op9-fJllfeRXgWbRxYkxrDblx5MihNLvghWiIJYVWHu_QjoiVtPPeqUsye40a5Dm_cW3IaKl-8qRf-Q')
+dbx = dropbox.Dropbox('sl.BIEbGIOWbwMq_6iMeJHwP6AnDZBNNWpzn_ywEosK3RtOnf8G00YDz1PfeBhIFRqMua57xsoAlVOo6Edh0Ota7meDwD748GnilHtuvg5eEFEl3K806XaYmyKX2vGdYJIze0Rx0Xdb7ZM')
+
 for entry in dbx.files_list_folder('').entries:
 	print(entry.name)
 
