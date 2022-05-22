@@ -5,10 +5,16 @@ import dropbox
 
 
 # using an access token
-dbx = dropbox.Dropbox('sl.BIEbGIOWbwMq_6iMeJHwP6AnDZBNNWpzn_ywEosK3RtOnf8G00YDz1PfeBhIFRqMua57xsoAlVOo6Edh0Ota7meDwD748GnilHtuvg5eEFEl3K806XaYmyKX2vGdYJIze0Rx0Xdb7ZM')
 
-for entry in dbx.files_list_folder('').entries:
-	print(entry.name)
+# using an access token
+dbx = dropbox.Dropbox('sl.BIFVS2Po_OUNDI8q_DVraj12gqyKm4DrwwCenpc1Xy3Aq1hvzYwu5nBp8cevJ1Gt3nmctUc2J7J_kbQ0vrUU91G04dDVDptP81zr4OxSqUZgeTP2ZANOD68GAvOFQ8N0mCLlfGX2Wcb_')
+
+str_1 = "Join our freelance network"
+
+str_1_encoded = bytes(str_1,'UTF-8')
+
+dbx.files_upload(str_1_encoded, '/Python/test.txt')
+
 
 
 app = Flask(__name__)
