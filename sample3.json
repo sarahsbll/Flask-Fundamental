@@ -1,0 +1,13 @@
+{
+    "message": "this is a sample json 0"
+}{
+    "message": "this is a sample json 1"
+}{
+    "console": "Playstation 5",
+    "games": [
+        "Spiderman",
+        "God of War"
+    ]
+}{
+    "message": "test"
+}
