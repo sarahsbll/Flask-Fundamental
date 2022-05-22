@@ -1,23 +1,23 @@
 # app.py
 
 from flask import Flask, request
-from github import Github
+import dropbox
 
 
 # using an access token
+dbx = dropbox.Dropbox('sl.BIHrA2OxmhhRbKbeVGMAvWeCB-5V6jIugXVEN7ldnz0Gjp7QAbR2W0PhsiW0op9-fJllfeRXgWbRxYkxrDblx5MihNLvghWiIJYVWHu_QjoiVtPPeqUsye40a5Dm_cW3IaKl-8qRf-Q')
+for entry in dbx.files_list_folder('').entries:
+    print(entry.name)
 
-g = Github("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")
 
 app = Flask(__name__)
 @app.route('/webhook', methods=['POST'])
 def webhook():
     if request.method == 'POST':
-        print("Data received from Webhook is: ", request.json)
-        for repo in g.get_user().get_repos():
-            print(repo.name)
-        #with open("test.txt", "w") as outfile:
-            #outfile.write("test")
-            #outfile.close()
+	print("Data received from Webhook is: ", request.json)
+	#with open("test.txt", "w") as outfile:            
+		#outfile.write("test")
+		#outfile.close()
         return "Webhook received!"
 
 
