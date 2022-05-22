@@ -5,7 +5,7 @@ from github import Github
 
 
 # using an access token
-g = Github("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")
+g = Github("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")
 
 
 app = Flask(__name__)
