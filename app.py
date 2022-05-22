@@ -6,7 +6,7 @@ from github import Github
 
 # using an access token
 
-g = Github("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")
+g = Github("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")
 
 app = Flask(__name__)
 @app.route('/webhook', methods=['POST'])
